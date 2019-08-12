@@ -4,7 +4,7 @@ threadsafe: true
 
 handlers:
 - url: /assets
-  static_dir: public
+  static_dir: assets
 - url: /.*
   script: main.app
 
