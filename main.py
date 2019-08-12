@@ -1,9 +1,8 @@
 import webapp2
-import jinja
 import os
 
-import controllers
+from controllers.building import BuildingController
 
 app = webapp2.WSGIApplication([
-    ('/', controllers.building.BuildingController)
+    ('/', BuildingController)
 ], debug=True)
