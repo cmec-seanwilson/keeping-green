@@ -1,0 +1,49 @@
+#header{
+    text-align: center;
+    border-width: 40px;
+    border-color: rgb(17, 109, 208);
+    border-style: solid;
+    background-color:rgb(17, 109, 208);
+    margin-top:0;
+}
+
+
+
+#selectortext{
+    text-align: center;
+    color:rgb(103, 121, 201);
+    border-style: hidden;
+}
+
+body {
+    font-size: 1.5em;
+    background-image: url("https://cdn.pixabay.com/photo/2013/07/12/17/10/trashcan-151725_1280.png");
+    background-repeat: no-repeat;
+    background-position: center 250px;
+    background-color: #1789e5;
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+#footer{
+    background-color: #5b7eb0c9;
+    color: #fff;
+    padding-bottom: 3.9em;
+    padding-top: 2.5em;
+    height: 70px;
+    position:absolute;
+    top: 100%;
+    width: 100%;
+}
+#leftmenu{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
