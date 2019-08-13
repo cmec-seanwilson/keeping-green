@@ -1,0 +1,18 @@
+{% extends 'templates/layouts/master.html' %}
+{% set title = 'Bin Directions' %}
+{% set current_page = 'Bin directions on floor ' + floor.name + ' for building ' + building.name %}
+
+
+{% block body %}
+    <ul class="bin-directions">
+        {% for bin in bins %}
+            <li class="bin-header">Bin {{ bin.id }}</li>
+            <li class="direction">
+                {% for direction in bin.directions %}
+                    <div class="step">Step {{ direction.step }}:</div>
+                    <div>{{ direction.message | safe }}</div>
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

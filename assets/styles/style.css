@@ -105,10 +105,39 @@ html {
 .menu li {
     text-align: center;
     height: 150px;
+    min-width: 200px;
     line-height: 150px;
+    background-color: rgb(17, 109, 208);
+    margin-right: 15px;
 }
 
 .menu a:hover {
     color: rgb(0, 255, 0);
     opacity: 0.4;
+}
+
+.bin-directions {
+    width: 100%;
+}
+
+.bin-directions .bin-header {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.bin-directions .direction div {
+    display: inline-block;
+}
+
+.bin-direction .step {
+    color: #fff;
+    background-color: rgb(17, 109, 208);
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    border-radius: 100%;
+    font-weight: 800;
 }

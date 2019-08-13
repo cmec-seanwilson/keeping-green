@@ -10,19 +10,24 @@ floors = [
     { 'name':  '2nd', 'building': 1653 },
     { 'name': '3rd', 'building': 1653 },
     { 'name': '4th', 'building': 1653 },
-    { 'name': '5th', 'building': 1653 }
+    { 'name': '5th', 'building': 1653 },
+    { 'name': 'Library Main', 'building': 1650 },
+    { 'name': 'Library Sub', 'building': 1650 }
 ]
 
 buildings = [
-    { 'street_number': 1653, 'name': 'AB-1' }
+    { 'street_number': 1653, 'name': 'AB-1' },
+    { 'street_number': 1650, 'name': 'Bedford' }
 ]
 
 bins = [
-    { 'building': 1653, 'floor': 'Sub', 'id': 1 }
+    { 'building': 1650, 'floor': 'Library Main', 'id': 1 },
+    { 'building': 1650, 'floor': 'Library Sub', 'id': 2 }
 ]
 
 directions = [
-    { 'bin': 1, 'step': 1, 'message': 'foo bar' }
+    { 'bin': 1, 'step': 1, 'message': 'Under the stairs by the <strong>Printing Room</strong> is recycling and trash cans' },
+    { 'bin': 2, 'step': 1, 'message': 'Towards the elevator opposite of the <strong>Printing Room</strong>' }
 ]
 
 class Buildings(webapp2.RequestHandler):
@@ -57,7 +62,36 @@ class Floors(webapp2.RequestHandler):
             'floors': building_floors
         }))
 
+class Directions(webapp2.RequestHandler):
+    def get(self):
+        building_street_number = self.request.get('building')
+        building_floor = self.request.get('floor')
+
+        building = [b for b in buildings if str(b['street_number']) == building_street_number][0]
+        floor = [f for f in floors if str(f['building']) == building_street_number and f['name'] == building_floor][0]
+        floor_bins = []
+
+        # print building, floor, 'floor, building'
+
+        for bin in bins:
+            if str(bin['building']) == building_street_number and bin['floor'] == building_floor:
+                bin['directions'] = []
+                for direction in directions:
+                    if direction['bin'] == bin['id']:
+                        bin['directions'].append(direction)
+                bin['directions'] = sorted(bin['directions'], lambda d: d['step'])
+                floor_bins.append(bin)
+        
+        direction_template = jinja_env.get_template('templates/direction.html')
+        self.response.write(direction_template.render({
+            'building': building,
+            'floor':  floor,
+            'bins': floor_bins
+        }))
+
+
 app = webapp2.WSGIApplication([
     ('/', Buildings),
-    ('/floors', Floors)
+    ('/floors', Floors),
+    ('/directions',  Directions)
 ], debug=True)
