@@ -1,20 +1,16 @@
-<ul>
-    <div id="bedford floors"></div>
-    <li><a href=""> library sub floor</a></li>
-    <li><a href="">library main floor </a></li>
-    <li><a href="">2nd floor in the library </a></li>
-    <li><a href="">first floor</a></li>
-    <li><a href="">2nd floor</a></li>
-    <li><a href="">Sub floor</a></li>
-</ul>
+{% extends 'templates/layouts/master.html' %}
+{% set current_page = 'Select a floor in building ' + building.name %}
 
-<ul>
+{% block header %}
+    <h1>{{ building.name }} Building</h1>
+    <h1>Keeping Our Campus Clean</h1>
+{% endblock %}
 
-    <div id="AB1 floors"></div>
-    <li><a href="">Sun floor</a></li>
-    <li><a href="">Main floor</a></li>
-    <li><a href="">2nd floor</a></li>
-    <li><a href="">3rd floor</a></li>
-    <li><a href="">4th floor</a></li>
-    <li><a href="">5th floor</a></li>
-</ul>
+{% block body %}
+    <h2 class="text-2xl text-white"> Select a floor... </h2>
+    <ul class="menu">
+        {% for floor in floors %}
+            <li class="w-1/4"><a href="{{ floor.link }}">{{ floor.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %} 
