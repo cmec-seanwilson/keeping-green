@@ -1,4 +1,21 @@
-#header{
+body {
+    font-size: 1.5em;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center 250px;
+    background-color: #1789e5;
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.header { 
     text-align: center;
     border-width: 40px;
     border-color: rgb(17, 109, 208);
@@ -7,7 +24,59 @@
     margin-top:0;
 }
 
+.navbar {
+    height: 100px;
+    background-color:rgb(17, 109, 208);
+}
 
+.navbar .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+}
+
+.navbar .app-name {
+    color: #fff;
+}
+
+.navbar .app-name > span {
+    color: rgb(0, 255, 0);
+    opacity: 0.4;
+    font-weight: bold;
+}
+
+.navbar .page-title {
+    margin-left: auto;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar .page-title:before {
+    content: 'CURRENT PAGE';
+    text-transform: uppercase;
+    position: relative;
+    font-size: 0.6em;
+    color: #fff;
+    opacity: 0.6;
+    display: block;
+}
+
+.navbar-brand .brand-image {
+    width: 80px;
+}
+
+#help-buttons > a {
+    background-color:rgb(17, 109, 208);
+    color: #fff;
+    min-width: 200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    height: 60px;
+    line-height: 60px;
+}
 
 #selectortext{
     text-align: center;
@@ -15,21 +84,6 @@
     border-style: hidden;
 }
 
-body {
-    font-size: 1.5em;
-    background-image: url("https://cdn.pixabay.com/photo/2013/07/12/17/10/trashcan-151725_1280.png");
-    background-repeat: no-repeat;
-    background-position: center 250px;
-    background-color: #1789e5;
-    background-size: contain;
-    margin: 0;
-    padding: 0;
-}
-
-html{
-    margin: 0;
-    padding: 0;
-}
 #footer{
     background-color: #5b7eb0c9;
     color: #fff;

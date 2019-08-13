@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Keeping Green - {{ title }}</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.1/tailwind.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar-brand w-1/3">
+                <img src="https://cdn.pixabay.com/photo/2013/07/12/17/10/trashcan-151725_1280.png" alt="" class="brand-image">
+            </div>
+
+            <div class="w-1/3 text-center">
+                <p class="app-name">Keeping <span>Green</span></p>
+            </div>
+
+            <div class="w-1/3 text-right">
+                <p class="page-title text-2xl">{{ current_page }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto">
+        {% block body %}
+
+        {% endblock %}
+    </div>
+</body>
+</html>
