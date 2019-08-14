@@ -6,9 +6,8 @@ from models.building import Building
 class BuildingController(RequestHandler):
     def get(self):
         buildings = Building.query().fetch()
-        # fetch buildings from database
-        template_ctx = {
-            "buildings": buildings
-        }
+        # print buildings
         buildings_template = jinja_env.get_template('templates/index.html')
-        self.response.write(buildings_template.render(template_ctx))
+        self.response.write(buildings_template.render({
+            'buildings': buildings
+        }))

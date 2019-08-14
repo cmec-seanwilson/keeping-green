@@ -10,9 +10,9 @@
 
     <!-- add select buttons -->
     <!-- List of buildings -->
-    <ul class="menu">
+    <ul class="menu mb-5">
         {% for building in buildings %}
-            <li><a href="{{ building.link }}">{{ building.name }}</a></li>
+            <li><a href="{{ '/floors?building=' + building.street_number|string }}">{{ building.name }}</a></li>
         {% endfor %}
         <!-- <li><a href="\\wsl$\Ubuntu-18.04\home\rasheek\pworks\keeping-green\templates\bbuild.html">Bedford Building</a></li>
         <li><a href="\\wsl$\Ubuntu-18.04\home\rasheek\pworks\keeping-green\templates\AB-1.html">AB-1</a></li> -->

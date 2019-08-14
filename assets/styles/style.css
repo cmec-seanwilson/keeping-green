@@ -21,7 +21,7 @@ html {
 }
 
 .navbar {
-    height: 100px;
+    min-height: 100px;
     background-color:rgb(17, 109, 208);
 }
 
@@ -124,8 +124,9 @@ html {
     height: 40px;
     line-height: 40px;
     text-align: center;
-    color: #fff;
+    color: rgba(0, 0, 0, 0.5);
     font-weight: bold;
+    background-color: rgb(236, 236, 236);
 }
 
 .bin-directions .direction div {
