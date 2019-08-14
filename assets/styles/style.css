@@ -128,9 +128,13 @@ html {
     font-weight: bold;
 }
 
+
+
 .bin-directions .direction div {
     display: inline-block;
+    padding: 4px 12px;
 }
+
 
 .bin-direction .step {
     color: #fff;
@@ -140,4 +144,23 @@ html {
     line-height: 80px;
     border-radius: 100%;
     font-weight: 800;
+    text-align: center;
+}
+
+.step{
+    border-block: 5px;
+    background-color: rgb(243, 218, 74);
+    
+}
+.directmessage{
+   /* border-block: 5px; */
+    background-color: rgb(243, 218, 74);
+    margin-left: -6px;
+}
+
+
+
+.bin-direction li{
+    
+
 }
