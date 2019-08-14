@@ -130,38 +130,25 @@ html {
 }
 
 
+.bin-directions .direction {
+    background-color: rgb(243, 218, 74);
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
 
 .bin-directions .direction div {
     display: inline-block;
-    padding: 4px 12px;
 }
 
-
-.bin-direction .step {
+.bin-directions .step {
     color: #fff;
-    background-color: rgb(17, 109, 208);
-    height: 80px;
-    width: 80px;
-    line-height: 80px;
+    background-color: rgb(185, 158, 6);;
+    height: 40px;
+    width: 40px;
+    line-height: 41px;
     border-radius: 100%;
     font-weight: 800;
     text-align: center;
-}
-
-.step{
-    border-block: 5px;
-    background-color: rgb(243, 218, 74);
-    
-}
-.directmessage{
-   /* border-block: 5px; */
-    background-color: rgb(243, 218, 74);
-    margin-left: -6px;
-}
-
-
-
-.bin-direction li{
-    
-
+    margin: 0 15px;
 }

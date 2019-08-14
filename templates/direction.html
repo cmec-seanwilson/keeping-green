@@ -3,7 +3,7 @@
 {% set current_page = 'Directions on ' + floor.name + ' for ' + building.name + ' building' %}
 
 {% block body %}
-    <h1 class="font-black text-white underline mb-5">
+    <h1 class="font-black text-white underline mb-5 max-w-4xl mx-auto">
             There's
             {% if bins|length > 1 %}
                 {{ bins|length }}
@@ -14,12 +14,12 @@
             {% endif %}
             in this location
     </h1>
-    <ul class="bin-directions">
+    <ul class="bin-directions max-w-4xl mx-auto">
         {% for bin in bins %}
             <li class="bin-header">Bin {{ bin.id }}</li>
             <li class="direction">
                 {% for direction in bin.directions %}
-                    <div class="step">Step {{ direction.step }}:</div>
+                    <div class="step">{{ direction.step }}</div>
                     <div class="directmessage">{{ direction.message | safe }}</div>
                 {% endfor %}
             </li>
