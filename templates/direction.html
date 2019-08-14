@@ -20,7 +20,7 @@
             <li class="direction">
                 {% for direction in bin.directions %}
                     <div class="step">Step {{ direction.step }}:</div>
-                    <div>{{ direction.message | safe }}</div>
+                    <div class="directmessage">{{ direction.message | safe }}</div>
                 {% endfor %}
             </li>
         {% endfor %}
