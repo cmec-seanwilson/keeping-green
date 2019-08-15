@@ -8,7 +8,7 @@ def seed():
     # CREATE DIRECTIONS
     ##
     # Bedford bin directions
-    dir_b_lib = Direction(step = 1, message = '<strong>NO FOOD IN THE LIBRARY</strong>')
+    dir_b_lib = Direction(step = 1, message = '<strong>NO FOOD IN THE LIBRARY</strong>').put()
     dir_b_lib_sub = Direction(step = 1, message = 'Towards the elevator opposite of the <strong>Printing Room</strong> is a trash can').put()
     dir_b_lib_main = Direction(step = 1, message = 'Under the stairs by the <strong>Printing Room</strong> is recycling and trash cans').put()
     dir_b_lib_2 = Direction( step = 1, message = 'By the glass entrance, in the north-west corner are bins').put()
