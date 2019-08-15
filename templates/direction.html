@@ -23,12 +23,14 @@
     <ul class="bin-directions max-w-4xl mx-auto mb-5">
         {% for bin in bins %}
             <li class="bin-header">Bin {{ bin.id }}</li>
-            <li class="direction">
                 {% for direction in bin.directions %}
-                    <div class="step">{{ direction.step }}</div>
-                    <div class="directmessage">{{ direction.message | safe }}</div>
+                    <li class="direction">                    
+                        <div class="step">
+                            <span>{{ direction.step }}</span>
+                        </div>
+                        <div class="directmessage">{{ direction.message | safe }}</div>
+                    </li>
                 {% endfor %}
-            </li>
         {% endfor %}
     </ul>
 
