@@ -138,7 +138,9 @@ html {
     background-color: rgb(243, 218, 74);
     display: flex;
     align-items: center;
-    height: 60px;
+    min-height: 70px;
+    max-height: 120px;
+    padding-right: 5px;
 }
 
 .bin-directions .direction div {

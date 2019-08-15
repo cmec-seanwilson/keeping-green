@@ -3,6 +3,11 @@
 {% set current_page = 'Directions on ' + floor.name + ' for ' + building.name + ' building' %}
 
 {% block body %}
+    <div class="floor-image flex align-center w-full">
+            <iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg"></iframe>
+        <!-- <iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg&autoLoad=true"></iframe> -->
+        <!-- <pano class="overflow-y-hidden" width="1024" height="120" src="https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg"/> -->
+    </div>
     <h1 class="font-black text-white underline mb-5 max-w-4xl mx-auto">
             There's
             {% if bins|length > 1 %}
@@ -14,7 +19,7 @@
             {% endif %}
             in this location
     </h1>
-    <ul class="bin-directions max-w-4xl mx-auto">
+    <ul class="bin-directions max-w-4xl mx-auto mb-5">
         {% for bin in bins %}
             <li class="bin-header">Bin {{ bin.id }}</li>
             <li class="direction">
@@ -25,4 +30,11 @@
             </li>
         {% endfor %}
     </ul>
+
+    <script type="text/javascript" src="//sinanbolel.firebaseapp.com/cdn/panolens-1.0.1-beta.min.js"></script>
+    <script type="text/javascript" src="//sinanbolel.firebaseapp.com/cdn/pano-2.0.0.min.js"></script>
+    <script>
+            var panoPage = new Pano.Page('pano')
+            panoPage.init()
+    </script>
 {% endblock %}
