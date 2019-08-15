@@ -34,15 +34,13 @@ def seed():
     bin_b_lib_2 = Bin(directions = [dir_b_lib_2]).put()
     bin_b_main = Bin(directions = [dir_b_main, dir_b_main_2]).put()
     bin_b_2 = Bin(directions = [dir_b_2_1, dir_b_2_2]).put()
-    bin_ab1_main_front = Bin(directions = [dir_ab1_main_front])
-    bin_ab1_main_middle = Bin(directions = [dir_ab1_main_middle])
-    bin_ab1_sub_1 = Bin(directions = [dir_ab1_sub_1_1, dir_ab1_sub_1_2])
-    bin_ab1_2 = Bin(directions = [dir_ab1_2_1, dir_ab1_2_2])
-    bin_ab1_3 = Bin(directions = [dir_ab1_3])
-    bin_ab1_4 = Bin(directions = [dir_ab1_4])
-    bin_ab1_5 = Bin(directions = [dir_ab1_5])
-
-   
+    bin_ab1_main_front = Bin(directions = [dir_ab1_main_front]).put()
+    bin_ab1_main_middle = Bin(directions = [dir_ab1_main_middle]).put()
+    bin_ab1_sub_1 = Bin(directions = [dir_ab1_sub_1_1, dir_ab1_sub_1_2]).put()
+    bin_ab1_2 = Bin(directions = [dir_ab1_2_1, dir_ab1_2_2]).put()
+    bin_ab1_3 = Bin(directions = [dir_ab1_3]).put()
+    bin_ab1_4 = Bin(directions = [dir_ab1_4]).put()
+    bin_ab1_5 = Bin(directions = [dir_ab1_5]).put()
 
     ##
     # CREATE FLOORS
