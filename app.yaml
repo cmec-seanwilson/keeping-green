@@ -5,6 +5,8 @@ threadsafe: true
 handlers:
 - url: /assets
   static_dir: assets
+  http_headers:
+    Access-Control-Allow-Origin: '*'
 - url: /.*
   script: main.app
 

@@ -3,6 +3,11 @@
 {% set current_page = 'Directions on ' + floor.name + ' for ' + building.name + ' building' %}
 
 {% block body %}
+    <div class="floor-image flex align-center w-full">
+        <!-- {% set floor_image = 'https://33c1ef6a.ngrok.io/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg' %} -->
+        <pano class="overflow-y-hidden" width="1024" height="512" src="https://utrum.serveo.net/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg"/>
+        <!-- <img src="/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg" alt=""> -->
+    </div>
     <h1 class="font-black text-white underline mb-5 max-w-4xl mx-auto">
             There's
             {% if bins|length > 1 %}
@@ -25,4 +30,11 @@
             </li>
         {% endfor %}
     </ul>
+
+    <script type="text/javascript" src="//sinanbolel.firebaseapp.com/cdn/panolens-1.0.1-beta.min.js"></script>
+    <script type="text/javascript" src="//sinanbolel.firebaseapp.com/cdn/pano-2.0.0.min.js"></script>
+    <script>
+            var panoPage = new Pano.Page('pano')
+            panoPage.init()
+    </script>
 {% endblock %}
