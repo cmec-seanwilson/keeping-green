@@ -10,7 +10,7 @@
     <h2 class="text-2xl text-white"> Select a floor... </h2>
     <ul class="menu">
         {% for floor in floors %}
-            <li class="w-1/4"><a href="{{ floor.link }}">{{ floor.name }}</a></li>
+            <li class="w-1/4"><a href="/directions?building={{ building.street_number }}&floor={{ floor.name }}">{{ floor.name }}</a></li>
         {% endfor %}
     </ul>
 {% endblock %} 

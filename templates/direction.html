@@ -1,16 +1,26 @@
 {% extends 'templates/layouts/master.html' %}
 {% set title = 'Bin Directions' %}
-{% set current_page = 'Bin directions on floor ' + floor.name + ' for building ' + building.name %}
-
+{% set current_page = 'Directions on ' + floor.name + ' for ' + building.name + ' building' %}
 
 {% block body %}
-    <ul class="bin-directions">
+    <h1 class="font-black text-white underline mb-5 max-w-4xl mx-auto">
+            There's
+            {% if bins|length > 1 %}
+                {{ bins|length }}
+            {% elif bins|length == 0 %}
+                no bins 
+            {% elif bins|length == 1 %}
+                one bin
+            {% endif %}
+            in this location
+    </h1>
+    <ul class="bin-directions max-w-4xl mx-auto">
         {% for bin in bins %}
             <li class="bin-header">Bin {{ bin.id }}</li>
             <li class="direction">
                 {% for direction in bin.directions %}
-                    <div class="step">Step {{ direction.step }}:</div>
-                    <div>{{ direction.message | safe }}</div>
+                    <div class="step">{{ direction.step }}</div>
+                    <div class="directmessage">{{ direction.message | safe }}</div>
                 {% endfor %}
             </li>
         {% endfor %}
