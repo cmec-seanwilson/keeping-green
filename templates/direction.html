@@ -4,9 +4,7 @@
 
 {% block body %}
     <div class="floor-image flex align-center w-full">
-        <!-- {% set floor_image = 'https://33c1ef6a.ngrok.io/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg' %} -->
         <pano class="overflow-y-hidden" width="1024" height="512" src="https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg"/>
-        <!-- <img src="/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg" alt=""> -->
     </div>
     <h1 class="font-black text-white underline mb-5 max-w-4xl mx-auto">
             There's
@@ -19,7 +17,7 @@
             {% endif %}
             in this location
     </h1>
-    <ul class="bin-directions max-w-4xl mx-auto">
+    <ul class="bin-directions max-w-4xl mx-auto mb-5">
         {% for bin in bins %}
             <li class="bin-header">Bin {{ bin.id }}</li>
             <li class="direction">

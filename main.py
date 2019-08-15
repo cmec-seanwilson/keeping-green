@@ -8,9 +8,12 @@ from lib.jinja import jinja_env
  
 class SeedDatabase(webapp2.RequestHandler):
     def get(self):
-        seed()
-        self.response.write('Database Successfully Seeded')
-
+        password = self.request.get('password')
+        if password == 'cssi-x-19-keeping-green-shiki':
+            seed()
+            self.response.write('Database Successfully Seeded')
+        else:
+            self.response.write('Incorrect password.')
 app = webapp2.WSGIApplication([
     ('/', BuildingController),
     ('/floors', FloorController),
