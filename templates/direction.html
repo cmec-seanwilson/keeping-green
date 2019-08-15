@@ -4,7 +4,8 @@
 
 {% block body %}
     <div class="floor-image flex align-center w-full">
-            <iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg&autoLoad=true"></iframe>
+            <iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg&autoLoad=true"></iframe>
+        <iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg&autoLoad=true"></iframe>
         <!-- <pano class="overflow-y-hidden" width="1024" height="120" src="https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg"/> -->
     </div>
     <h1 class="font-black text-white underline mb-5 max-w-4xl mx-auto">
