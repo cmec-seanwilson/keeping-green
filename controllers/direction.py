@@ -1,9 +1,11 @@
 from webapp2 import RequestHandler
 from models.building import Building
 from lib.jinja import jinja_env
+import os
 
 class DirectionController(RequestHandler):
     def get(self):
+        # print , 'aoisdnaisndiasndi'
         building_street_number = self.request.get('building')
         floor_name = self.request.get('floor')
         building = Building.query(Building.street_number == int(building_street_number)).get()
@@ -28,5 +30,6 @@ class DirectionController(RequestHandler):
         self.response.write(direction_template.render({
             'building': building,
             'floor':  floor,
-            'bins': bins
+            'bins': bins,
+            'http_host': os.environ['HTTP_HOST']
         }))
