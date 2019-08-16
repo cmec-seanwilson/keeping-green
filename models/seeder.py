@@ -2,6 +2,7 @@ from building import Building
 from floor import Floor
 from bin import Bin
 from direction import Direction
+from hotspot import HotSpot
 
 def seed():
     ##
