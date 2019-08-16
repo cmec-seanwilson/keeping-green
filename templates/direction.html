@@ -59,8 +59,8 @@
         hotSpots: [
             {% for hotspot in floor.hotspots %}
                 {
-                    pitch: hotspot.pitch,
-                    yaw: hotspot.yaw,
+                    pitch: {{ hotspot.pitch }},
+                    yaw: {{ hotspot.yaw }},
                     type: 'info',
                     text: hotspot.text || 'Bins'
                 },
