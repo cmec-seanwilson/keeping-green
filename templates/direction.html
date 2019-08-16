@@ -53,7 +53,9 @@
         type: "equirectangular",
         panorama: 'https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg',
         autoLoad: true,
-        hfov: 60
+        hfov: 60,
+        compass: true,
+        northOffset: 50
     });
         // var viewer = new PhotoSphereViewer({
         //     container: 'viewer',
