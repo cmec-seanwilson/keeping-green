@@ -13,11 +13,11 @@ class FloorController(RequestHandler):
         for floor in building.floors:
             _floor = floor.get().to_dict()
             hotspots = []
-            print _floor
             for hotspot in _floor['hotspots']:
                 hotspots.append(hotspot.get())
             _floor['hostspots'] = hotspots 
             floors.append(_floor)
+            print _floor
         #  '/directions?building=%s&floor=%s'%(floor['building'], floor['name'])
         floors_template = jinja_env.get_template('templates/floors.html')
         self.response.write(floors_template.render({
