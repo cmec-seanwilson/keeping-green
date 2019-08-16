@@ -65,28 +65,11 @@
                     text: "{{ hotspot.text or 'Bins'}}"
                 },
             {% endfor %}
-            // {
-            //     pitch: 8,
-            //     yaw: 230,
-            //     type: 'info',
-            //     text: 'Bins'
-            // },
-            // {
-            //     pitch: 6,
-            //     yaw: 120,
-            //     type: 'info',
-            //     text: 'Bins'
-            // }
         ]
     });
 
-    console.log(panoViewer)
-    panoViewer,on('error', function () {
+    panoViewer.on('error', function () {
         document.getElementById('panorama'),style.display = 'none'
     })
-        // var viewer = new PhotoSphereViewer({
-        //     container: 'viewer',
-        //     panorama: 'https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg'
-        // });
     </script>
 {% endblock %}
