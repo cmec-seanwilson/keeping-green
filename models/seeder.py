@@ -17,7 +17,7 @@ def seed():
     dir_b_main_2 = Direction(step = 2, message = 'If you\'re in the middle of the main floor there are bins at the entrance or <strong>Auditorium</strong>').put()
     dir_b_2_1 = Direction(step = 1, message = 'Adjacent to the <strong>Language Lab</strong> are bins').put()
     dir_b_2_2 = Direction(step = 1, message = 'There is a bin between the stairs leading down near the entrance of the <strong>Computer Lab</strong>').put()
-    dir_ab1_main_front = Direction(step = 1, message = 'There are recycling and trash bins behind the <strong>Security Desk</strog> under the steps leading to the <strong>Cafeteria</strong>').put()
+    dir_ab1_main_front = Direction(step = 1, message = 'There are recycling and trash bins behind the <strong>Security Desk</strong> under the steps leading to the <strong>Cafeteria</strong>').put()
     dir_ab1_main_middle = Direction(step = 1, message = 'If you\'re in the middle of the main floor, walk towards the entrance or walk towards the <strong>Auditorium</strong>').put()
     dir_ab1_sub_1_1 = Direction(step = 1, message = 'If you\'re facing the stairs, between the <strong>Public Safety</strong> room and the stairs leading to the main floor are bins on your left or right if you\'re facing the <strong>Public Safety</strong> room').put()
     dir_ab1_sub_2_1 = Direction(step = 1, message = 'There is a bin adjacent to class <strong>C09</strong>').put()
