@@ -50,7 +50,7 @@
             // var panoPage = new Pano.Page('pano')
             // panoPage.init()
     pannellum.viewer('panorama', {
-        type: "cubemap",
+        type: "multires",
         panorama: 'https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg',
         autoLoad: true,
         // hfov: 120
