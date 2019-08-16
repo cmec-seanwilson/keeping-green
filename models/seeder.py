@@ -103,7 +103,7 @@ def seed():
     ], hotspots = [
         floor_b_lib_2_hotspot_1
     ]).put()
-    floor_b_1 = Floor(name = '1st', bins = [
+    floor_b_main = Floor(name = 'Main', bins = [
         bin_b_main
     ]).put()
     floor_b_2 = Floor(name = '2nd', bins = [
@@ -114,7 +114,7 @@ def seed():
         floor_b_lib_sub,
         floor_b_lib_main,
         floor_b_lib_2,
-        floor_b_1,
+        floor_b_main,
         floor_b_2
     ]
 
