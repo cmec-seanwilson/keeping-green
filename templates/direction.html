@@ -50,8 +50,9 @@
             // var panoPage = new Pano.Page('pano')
             // panoPage.init()
     pannellum.viewer('panorama', {
-        "type": "equirectangular",
-        "panorama": 'https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg'
+        type: "equirectangular",
+        panorama: 'https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg',
+        autoLoad: true
     });
         // var viewer = new PhotoSphereViewer({
         //     container: 'viewer',
