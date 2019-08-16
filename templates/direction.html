@@ -57,7 +57,7 @@
         compass: true,
         northOffset: 180,
         hotSpots: [
-            {% for hotspot in floor.hotspots %}
+            {% for hotspot in hotspots %}
                 {
                     pitch: {{ hotspot.pitch }},
                     yaw: {{ hotspot.yaw }},
