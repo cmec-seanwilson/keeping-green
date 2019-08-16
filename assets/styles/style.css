@@ -147,6 +147,10 @@ html {
     border-bottom: 2px solid rgb(185, 158, 6);
 }
 
+.bin-directions .direction:last-child {
+    margin-bottom: 15px;
+}
+
 .bin-directions .direction div {
     display: inline-block;
 }
