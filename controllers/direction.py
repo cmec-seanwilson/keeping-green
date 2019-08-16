@@ -28,7 +28,7 @@ class DirectionController(RequestHandler):
                 bins.append(_bin)
 
         if floor.hotspots != None:
-            for hotspot in _floor.hotspots:
+            for hotspot in floor.hotspots:
                 hotspots.append(hotspot.get())
 
         direction_template = jinja_env.get_template('templates/direction.html')
