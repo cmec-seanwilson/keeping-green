@@ -48,8 +48,8 @@
 <script>
 let panoViewer = pannellum.viewer('panorama', {
     type: "equirectangular",
-    panorama: '/assets/images/main_50.jpg',
-    //panorama: 'https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg',
+    //panorama: '/assets/images/main_50.jpg',
+    panorama: 'https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg',
     autoLoad: true,
     hfov: 90,
     compass: true,
