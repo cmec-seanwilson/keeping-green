@@ -10,7 +10,7 @@
     <h2 class="text-2xl text-white w-4/5 mx-auto md:w-full md:mx-0"> Select a floor... </h2>
     <ul class="menu flex-col md:flex-row">
         {% for floor in floors %}
-            <li class="w-4/5 mx-auto md:ml-0 md:w-1/4 md:mr-5"><a href="/directions?building={{ building.street_number }}&floor={{ floor.name }}">{{ floor.name }}</a></li>
+            <li class="w-4/5 mx-auto mb-5 md:mb-0 md:ml-0 md:w-1/4 md:mr-5"><a href="/directions?building={{ building.street_number }}&floor={{ floor.name }}">{{ floor.name }}</a></li>
         {% endfor %}
     </ul>
 {% endblock %} 
