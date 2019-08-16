@@ -15,7 +15,7 @@ class FloorController(RequestHandler):
             hotspots = []
             for hotspot in _floor['hotspots']:
                 hotspots.append(hotspot.get())
-            _floor['hostspots'] = hotspots 
+            _floor['hotspots'] = hotspots
             floors.append(_floor)
             print _floor
         #  '/directions?building=%s&floor=%s'%(floor['building'], floor['name'])
