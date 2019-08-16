@@ -57,8 +57,8 @@ def seed():
     # CREATE FLOORS
     ##
     floor_ab1_sub = Floor(name = 'Sub', bins = [
-        bin_ab1_sub_1_1,
-        bin_ab1_sub_2_1
+        bin_ab1_sub_1,
+        bin_ab1_sub_2
     ]).put()
     floor_ab1_main = Floor(name = 'Main', bins = [
         bin_ab1_main_front,
