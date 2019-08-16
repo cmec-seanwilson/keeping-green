@@ -7,8 +7,6 @@ handlers:
   static_dir: assets
   http_headers:
     Access-Control-Allow-Origin: "*"
-- url: /seed.*
-  script: main.app
 - url: /.*
   script: main.app
 
