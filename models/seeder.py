@@ -23,10 +23,10 @@ def seed():
     dir_ab1_sub_1_2 = Direction(step=2, message='Adjacent to class <strong>C09</strong>').put()
     dir_ab1_2_1 = Direction(step=1, message='Near the <strong>Main Elevator</strong>, there are bins in the cafeteria').put()
     dir_ab1_2_2 = Direction(step = 1, message = 'There is bin walking opposite from the cafeteria under the <strong>Nurse</strong> sign').put()
-    dir_ab1_2_3 = Direction(step=1, message='There are three bins on this floor equal distance apart from each other walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
-    dir_ab1_3 = Direction(step=1, message='There are three bins on this floor equal distance apart from each other walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
-    dir_ab1_4 = Direction(step=1, message='There are three bins on this floor equal distance apart from each other walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
-    dir_ab1_5 = Direction(step=1, message='There are three bins on this floor equal distance apart from each other walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
+    dir_ab1_2_3= Direction(step=1, message='There are multiple bins in a line separate by a small distance from each other if you\'re walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
+    dir_ab1_3= Direction(step=1, message='There are multiple bins in a line separate by a small distance from each other if you\'re walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
+    dir_ab1_4 = Direction(step=1, message='There are multiple bins in a line separate by a small distance from each other if you\'re walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
+    dir_ab1_5= Direction(step=1, message='There are multiple bins in a line separate by a small distance from each other if you\'re walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
 
     ##
     # CREATE BINS
