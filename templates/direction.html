@@ -49,7 +49,7 @@
     <script>
             // var panoPage = new Pano.Page('pano')
             // panoPage.init()
-    pannellum.viewer('panorama', {
+    let panoViewer = pannellum.viewer('panorama', {
         type: "equirectangular",
         panorama: 'https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg',
         autoLoad: true,
@@ -79,6 +79,10 @@
             // }
         ]
     });
+
+    panoViewer,on('error', function () {
+        document.getElementById('panorama'),style.display = 'none'
+    })
         // var viewer = new PhotoSphereViewer({
         //     container: 'viewer',
         //     panorama: 'https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg'
