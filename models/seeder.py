@@ -53,6 +53,7 @@ def seed():
     ##
     floor_ab1_main_hotspot_1 = HotSpot(pitch = 8, yaw = 230).put()
     floor_ab1_main_hotspot_2 = HotSpot(pitch = 6, yaw = 120).put()
+    floor_b_lib_2_hotspot_1 = HotSpot(pitch = 4, yaw = -30).put()
 
     ##
     # CREATE FLOORS
@@ -99,6 +100,8 @@ def seed():
     ]).put()
     floor_b_lib_2 = Floor(name = 'Library 2nd', bins = [
         bin_b_lib_sub
+    ], hotspots = [
+        floor_b_lib_2_hotspot_1
     ]).put()
     floor_b_1 = Floor(name = '1st', bins = [
         bin_b_main
