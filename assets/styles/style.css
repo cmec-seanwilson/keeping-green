@@ -163,3 +163,8 @@ html {
     margin: 0 15px;
     flex-shrink: 0;
 }
+
+#viewer {
+    width: 100vw;
+    height: 10vh;
+}
