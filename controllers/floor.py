@@ -13,7 +13,8 @@ class FloorController(RequestHandler):
         for floor in building.floors:
             _floor = floor.get().to_dict()
             hotspots = []
-            for hotspot in _floor.hotspots:
+            print _floor
+            for hotspot in _floor['hotspots']:
                 hotspots.append(hotspot.get())
             _floor['hostspots'] = hotspots 
             floors.append(_floor)
