@@ -43,6 +43,12 @@ def seed():
     bin_ab1_5 = Bin(directions = [dir_ab1_5]).put()
 
     ##
+    # CREATE HOTSPOTS
+    ##
+    floor_ab1_main_hotspot_1 = HotSpot(pitch = 8, yaw = 230)
+    floor_ab1_main_hotspot_2 = Hotspot(pitch = 6, yaw = 120)
+
+    ##
     # CREATE FLOORS
     ##
     floor_ab1_sub = Floor(name = 'Sub', bins = [
@@ -51,6 +57,9 @@ def seed():
     floor_ab1_main = Floor(name = 'Main', bins = [
         bin_ab1_main_front,
         bin_ab1_main_middle
+    ], hotspots = [
+        floor_ab1_main_hotspot_1,
+        floor_ab1_main_hotspot_2
     ]).put()
     floor_ab1_2 = Floor(name = '2nd', bins = [
         bin_ab1_2
