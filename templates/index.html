@@ -8,7 +8,6 @@
 {% block body %}
     <h2 class="text-2xl text-white w-4/5 mx-auto md:w-full md:mx-0"> Select... </h2>
 
-    <!-- add select buttons -->
     <!-- List of buildings -->
     <ul class="menu mb-5 flex-col md:flex-row">
         {% for building in buildings %}
@@ -16,17 +15,11 @@
         {% endfor %}
     </ul>
 
-
     <p class="text-center text-3xl font-bold text-white mb-5">
         Need Help?
     </p>
     <div id="help-buttons" class="flex justify-center flex-col md:flex-row">
-        <a class="md:mr-5 w-4/5 mx-auto md:mx-0 md:w-40 mb-5 md:mb-0" href="https://www.grownyc.org/recycling/whattorecycle">Recycling info</a>
-        <a class="w-4/5 mx-auto md:mx-0 md:w-40" href="https://www.rubiconglobal.com/truth-about-trash/">What is Landfill?</a>
+        <a class="md:mr-5 w-4/5 mx-auto md:mx-0 md:w-40 mb-5 md:mb-0" target="_blank" href="https://www.grownyc.org/recycling/whattorecycle">Recycling info</a>
+        <a class="w-4/5 mx-auto md:mx-0 md:w-40" target="_blank" href="https://www.rubiconglobal.com/truth-about-trash/">What is Landfill?</a>
     </div>
-
-    <!-- <div id ="footer"> </div> 
-    <div id="leftmenu">
-
-    </div> -->
 {% endblock %}
