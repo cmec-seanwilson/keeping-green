@@ -15,6 +15,10 @@ class DirectionController(RequestHandler):
             _floor = _floor.get()
             if _floor.name == floor_name:
                 floor = _floor
+            hotspots = []
+            for hotspot in _floor['hotspots']:
+                hotspots.append(hotspot.get())
+            _floor['hotspots'] = hotspots
 
         if floor.bins != None:
             for _bin in floor.bins:
