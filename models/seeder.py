@@ -9,23 +9,24 @@ def seed():
     # CREATE DIRECTIONS
     ##
     # Bedford bin directions
-    dir_b_lib = Direction(step = 1, message = '<strong>NO FOOD IN THE LIBRARY</strong>').put()
+    dir_b_lib = Direction(step = 1, message = '<strong>Heads up:</strong> No food or drink is allowed in the library').put()
     dir_b_lib_sub = Direction(step = 1, message = 'Towards the elevator opposite of the <strong>Printing Room</strong> is a trash can').put()
     dir_b_lib_main = Direction(step = 1, message = 'Under the stairs by the <strong>Printing Room</strong> is recycling and trash cans').put()
-    dir_b_lib_2 = Direction( step = 1, message = 'By the glass entrance, in the north-west corner are bins').put()
-    dir_b_main = Direction( step = 1, message = 'Inside Starbush and under the steps are recycling and trash bins').put()
+    dir_b_lib_2 = Direction( step = 1, message = 'By the <strong>glass entrance</strong>, in the north-west corner are bins').put()
+    dir_b_main = Direction( step = 1, message = 'Inside <strong>Starbucks</strong> and under the steps are bins').put()
     dir_b_main_2 = Direction( step = 2, message = 'If you are in the middle of the main floor there are bins at the entrance or auditorium').put()
-    dir_b_2_1 = Direction( step = 1, message = 'Adjacent to the <strong>Langquage Lab</strong> are bins').put()
-    dir_b_2_2 = Direction(step = 2, message = 'Between the stairs leading down and the entrance of the <strong>computer Lab</strong>').put()
-    dir_ab1_main_front = Direction(step = 1, message = 'There are recycling and trash bins bihind the security desk under the steps leading to the cafeteria').put()
-    dir_ab1_main_middle = Direction(step = 2, message = 'If you are in the middle of the main floor, walk towards the entrance or walk towards the auditorium').put()
-    dir_ab1_sub_1_1 = Direction(step=1, message='Between the Public Safety room and the stairs leading to the main floor are bins on your left if facing stairs-right if facing Public Safety room').put()
-    dir_ab1_sub_1_2 = Direction(step=2, message='Adjacent to class Co9').put()
-    dir_ab1_2_1 = Direction(step=1, message='By the the main elevator are bins in the cafeterial or walk opposite from the cafeteria under the Nurse sign is another bin').put()
-    dir_ab1_2_2= Direction(step=2, message='There are three bins on this floor with respected distance from each other walking from the elevator to the west').put()
-    dir_ab1_3 = Direction(step=1, message='There are three bins on this floor with respected distance from each other walking from the elevator to the west').put()
-    dir_ab1_4 = Direction(step=1, message='There are three bins on this floor with respected distance from each other walking from the elevator to the west').put()
-    dir_ab1_5 = Direction(step=1, message='There are three bins on this floor with respected distance from each other walking from the elevator to the west').put()
+    dir_b_2_1 = Direction( step = 1, message = 'Adjacent to the <strong>Language Lab</strong> are bins').put()
+    dir_b_2_2 = Direction(step = 2, message = 'Between the stairs leading down and the entrance of the <strong>Computer Lab</strong>').put()
+    dir_ab1_main_front = Direction(step = 1, message = 'There are recycling and trash bins behind the security desk under the steps leading to the <strong>Cafeteria</strong>').put()
+    dir_ab1_main_middle = Direction(step = 2, message = 'If you are in the middle of the main floor, walk towards the entrance or walk towards the <strong>Auditorium</strong>').put()
+    dir_ab1_sub_1_1 = Direction(step=1, message='If facing stairs, between the <strong>Public Safety</strong> room and the stairs leading to the main floor are bins on your left or right if you are facing the <strong>Public Safety</strong> room').put()
+    dir_ab1_sub_1_2 = Direction(step=2, message='Adjacent to class <strong>C09</strong>').put()
+    dir_ab1_2_1 = Direction(step=1, message='By the the <strong>Main Elevator</strong> are bins in the cafeteria').put()
+    dir_ab1_2_2 = Direction(step = 1, message = 'Walk opposite from the cafeteria under the <strong>Nurse</strong> sign is another bin').put()
+    dir_ab1_2_3 = Direction(step=1, message='There are three bins on this floor equal distance apart from each other walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
+    dir_ab1_3 = Direction(step=1, message='There are three bins on this floor equal distance apart from each other walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
+    dir_ab1_4 = Direction(step=1, message='There are three bins on this floor equal distance apart from each other walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
+    dir_ab1_5 = Direction(step=1, message='There are three bins on this floor equal distance apart from each other walking from the <strong>Elevator</strong> to the <strong>West</strong>').put()
 
     ##
     # CREATE BINS
@@ -39,6 +40,8 @@ def seed():
     bin_ab1_main_middle = Bin(directions = [dir_ab1_main_middle]).put()
     bin_ab1_sub_1 = Bin(directions = [dir_ab1_sub_1_1, dir_ab1_sub_1_2]).put()
     bin_ab1_2 = Bin(directions = [dir_ab1_2_1, dir_ab1_2_2]).put()
+    bin_ab1_2_2 = Bin(directions = [dir_ab1_2_2]).put()
+    bin_ab1_2_3 = Bin(directions = [dir_ab1_2_3]).put()
     bin_ab1_3 = Bin(directions = [dir_ab1_3]).put()
     bin_ab1_4 = Bin(directions = [dir_ab1_4]).put()
     bin_ab1_5 = Bin(directions = [dir_ab1_5]).put()
@@ -63,7 +66,9 @@ def seed():
         floor_ab1_main_hotspot_2
     ]).put()
     floor_ab1_2 = Floor(name = '2nd', bins = [
-        bin_ab1_2
+        bin_ab1_2,
+        bin_ab1_2_2,
+        bin_ab1_2_3
     ]).put()
     floor_ab1_3 = Floor(name = '3rd', bins = [
         bin_ab1_3
