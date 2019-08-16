@@ -35,7 +35,8 @@ def seed():
     bin_b_lib_main = Bin(directions = [dir_b_lib, dir_b_lib_main]).put()
     bin_b_lib_2 = Bin(directions = [dir_b_lib_2]).put()
     bin_b_main = Bin(directions = [dir_b_main, dir_b_main_2]).put()
-    bin_b_2 = Bin(directions = [dir_b_2_1, dir_b_2_2]).put()
+    bin_b_2 = Bin(directions = [dir_b_2_1]).put()
+    bin_b_2_2 = Bin(directions = [dir_b_2_2]).put()
     bin_ab1_main_front = Bin(directions = [dir_ab1_main_front]).put()
     bin_ab1_main_middle = Bin(directions = [dir_ab1_main_middle]).put()
     bin_ab1_sub_1 = Bin(directions = [dir_ab1_sub_1_1]).put()
@@ -103,7 +104,8 @@ def seed():
         bin_b_main
     ]).put()
     floor_b_2 = Floor(name = '2nd', bins = [
-        bin_b_2
+        bin_b_2,
+        bin_b_2_2
     ]).put()
     bedford_floors = [
         floor_b_lib_sub,
