@@ -62,7 +62,7 @@
                     pitch: {{ hotspot.pitch }},
                     yaw: {{ hotspot.yaw }},
                     type: 'info',
-                    text: "{{ hotspot.text || 'Bins'}} "
+                    text: "{{ hotspot.text or 'Bins'}} "
                 },
             {% endfor %}
             // {
