@@ -12,7 +12,7 @@
     <!-- List of buildings -->
     <ul class="menu mb-5 flex-col md:flex-row">
         {% for building in buildings %}
-            <li class="mx-auto w-4/5 md:w-40 md:ml-0 md:mr-5"><a href="{{ '/floors?building=' + building.street_number|string }}">{{ building.name }}</a></li>
+            <li class="mx-auto w-4/5 mb-5 md:mb-0 md:w-40 md:ml-0 md:mr-5"><a href="{{ '/floors?building=' + building.street_number|string }}">{{ building.name }}</a></li>
         {% endfor %}
     </ul>
 

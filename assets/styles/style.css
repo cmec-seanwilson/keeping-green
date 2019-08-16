@@ -21,7 +21,9 @@ html {
 }
 
 .navbar {
-    height: 150px;
+    /* min-height: 150px; */
+    height: 250px;
+    /* max-height: 250px; */
     background-color:rgb(17, 109, 208);
 }
 
@@ -119,9 +121,6 @@ html {
     opacity: 0.4;
 }
 
-.bin-directions {
-    width: 100%;
-}
 
 .bin-directions .bin-header {
     height: 40px;
@@ -138,7 +137,7 @@ html {
     display: flex;
     align-items: center;
     min-height: 80px;
-    max-height: 120px;
+    max-height: 350px;
     padding-right: 5px;
 }
 
@@ -167,7 +166,8 @@ html {
     flex-shrink: 0;
 }
 
-#viewer {
-    width: 100vw;
-    height: 10vh;
+@media (min-width: 768px) {
+    .navbar {
+        height: 150px;
+    }
 }

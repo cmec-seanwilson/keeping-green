@@ -17,7 +17,7 @@
     <div class="floor-image max-w-4xl mx-auto">
         <div id="panorama"></div>
     </div>
-    <h1 class="font-black text-white underline mb-5 max-w-4xl mx-auto">
+    <h1 class="font-black text-white underline mb-5 w-4/5 md:max-w-4xl mx-auto">
             There's
             {% if bins|length > 1 %}
                 {{ bins|length }} bins 
@@ -28,7 +28,7 @@
             {% endif %}
             in this location
     </h1>
-    <ul class="bin-directions max-w-4xl mx-auto mb-5">
+    <ul class="bin-directions w-4/5 md:w-full max-w-4xl mx-auto mb-5">
         {% for bin in bins %}
             <li class="bin-header">Bin {{ bin.id }}</li>
                 {% for direction in bin.directions %}
