@@ -19,7 +19,7 @@ x = 0
 
 def main():
     global x
-    credit_list = ["CREDITS - The Departed"," ","Leonardo DiCaprio - Billy","Matt Damon - Colin Sullivan", "Jack Nicholson - Frank Costello", "Mark Wahlberg - Dignam", "Martin Sheen - Queenan"]
+    credit_list = ["Sean Wilson - Back_End", "Micheal Mcintosh - Front_End", "Rashiqui Minott - Front_End"]
 
     going = True
     while going:
