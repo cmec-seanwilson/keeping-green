@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block body %}
-    <div class="floor-image max-w-4xl mx-auto">
+    <div class="floor-image mx-auto">
         <div id="panorama"></div>
     </div>
     <h1 class="font-black text-white underline mb-5 max-w-4xl mx-auto">
@@ -48,7 +48,8 @@
 <script>
 let panoViewer = pannellum.viewer('panorama', {
     type: "equirectangular",
-    panorama: 'https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg',
+    panorama: '/assets/images/main_50.jpg',
+    //panorama: 'https://{{ http_host }}/assets/images/buildings/{{ building.name|lower }}/floors/{{ floor.name|lower }}/{{ floor.name|lower }}.jpg',
     autoLoad: true,
     hfov: 90,
     compass: true,
