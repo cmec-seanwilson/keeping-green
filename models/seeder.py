@@ -47,7 +47,7 @@ def seed():
     # CREATE HOTSPOTS
     ##
     floor_ab1_main_hotspot_1 = HotSpot(pitch = 8, yaw = 230)
-    floor_ab1_main_hotspot_2 = Hotspot(pitch = 6, yaw = 120)
+    floor_ab1_main_hotspot_2 = HotSpot(pitch = 6, yaw = 120)
 
     ##
     # CREATE FLOORS
